@@ -1,5 +1,7 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by solg on 20.02.2017.
@@ -8,35 +10,48 @@ public class MainPageObject {
 
     private WebDriver driver;
 
-    By projectsTab = By.xpath("//li[@id='menu_projects']/a");
-    By downloadTab = By.id("menu_download");
-    By documentTab = By.xpath("//*[@title='Technical references and guides']");
-    By supportTab = By.linkText("Support");
-    By aboutTab = By.linkText("About");
+    @FindBy(xpath = "//li[@id='menu_projects']/a")
+    private WebElement projectsTab;
+
+    @FindBy(id = "menu_download")
+    private WebElement downloadTab;
+
+    @FindBy(xpath = "//*[@title='Technical references and guides']")
+    private WebElement documentTab;
+
+    @FindBy(linkText = "Support")
+    private WebElement supportTab;
+
+    @FindBy(linkText = "About")
+    private WebElement aboutTab;
 
     public MainPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public ProjectsPageObject clickProjectTab() {
-        driver.findElement(projectsTab).click();
+        projectsTab.click();
         return new ProjectsPageObject(driver);
     }
 
     public DownloadPageObject clickDownloadTab() {
-        driver.findElement(downloadTab).click();
+        downloadTab.click();
         return new DownloadPageObject(driver);
     }
+
     public DocumentationPageObject clickDocumentationTab() {
-        driver.findElement(documentTab).click();
+        documentTab.click();
         return new DocumentationPageObject(driver);
     }
+
     public SupportPageObject clickSupportTab() {
-        driver.findElement(supportTab).click();
+        supportTab.click();
         return new SupportPageObject(driver);
     }
+
     public AboutPageObject clickAboutTab() {
-        driver.findElement(aboutTab).click();
+        aboutTab.click();
         return new AboutPageObject(driver);
     }
 }

@@ -1,30 +1,35 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by solg on 21.02.2017.
  */
 public class AboutPageObject {
     private WebDriver driver;
-    By aboutSelLeftMenu = By.xpath("//*[@id='nav']/li/a");
-    By sponsorsLink = By.xpath("//a[@href='/sponsors']/parent::h3/a[1]");
 
+    @FindBy(xpath = "//*[@id='nav']/li/a")
+    private WebElement aboutSelLeftMenu;
+    @FindBy(xpath = "//a[@href='/sponsors']/parent::h3/a[1]")
+    private WebElement sponsorsLink;
 
 
     public AboutPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public boolean isAboutSelLeftMenuDisplayed(){
-        return driver.findElement(aboutSelLeftMenu).isDisplayed();
-    }
-    public boolean isSponsorsLinkDisplayed(){
-        return driver.findElement(sponsorsLink).isDisplayed();
+    public boolean isAboutSelLeftMenuDisplayed() {
+        return aboutSelLeftMenu.isDisplayed();
     }
 
-    public String clickSponsorsLink(){
-        driver.findElement(sponsorsLink).click();
+    public boolean isSponsorsLinkDisplayed() {
+        return sponsorsLink.isDisplayed();
+    }
+
+    public String clickSponsorsLink() {
+        sponsorsLink.click();
         return driver.getCurrentUrl();
     }
 }

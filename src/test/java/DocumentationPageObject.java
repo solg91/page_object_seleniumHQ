@@ -1,30 +1,36 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by solg on 20.02.2017.
  */
 public class DocumentationPageObject {
     private WebDriver driver;
-    By seleniumDocLink = By.xpath("//*[@id='side']//li[1]/a");
-    By codeLanPreferenceBlock = By.xpath("//*[@id='codeLanguagePreference']");
-    By nextTopic = By.xpath("//p[@class='topless']/a");
+    @FindBy(xpath = "//*[@id='side']//li[1]/a")
+    private WebElement seleniumDocLink;
+
+    @FindBy(xpath = "//*[@id='codeLanguagePreference']")
+    private WebElement codeLanPreferenceBlock;
+
+    @FindBy(xpath = "//p[@class='topless']/a")
+    private WebElement nextTopic;
 
 
     public DocumentationPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
+
     }
 
-    public boolean isCodeLanguagePreferencesDisplayed(){
-        return driver.findElement(codeLanPreferenceBlock).isDisplayed();
+    public boolean isCodeLanguagePreferencesDisplayed() {
+        return codeLanPreferenceBlock.isDisplayed();
     }
 
-    public void clickSeleniumDocumentationButton(){
-      driver.findElement(seleniumDocLink);
-    }
 
-    public String getNextTopicText(){
-        return driver.findElement(nextTopic).getText();
+    public String getNextTopicText() {
+        return nextTopic.getText();
     }
 
 

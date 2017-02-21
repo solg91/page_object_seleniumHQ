@@ -1,26 +1,31 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by solg on 20.02.2017.
  */
 public class DownloadPageObject {
     private WebDriver driver;
-    By downloadTab = By.id("menu_download");
-    By seleniumDownloadsMenu = By.xpath("//*[@id='nav']/li/a");
+    @FindBy(id = "menu_download")
+    private WebElement downloadTab;
+    @FindBy(xpath = "//*[@id='nav']/li/a")
+    private WebElement seleniumDownloadsMenu;
 
 
     public DownloadPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public String getDownloadTabUrl(){
-        driver.findElement(downloadTab).click();
+    public String getDownloadTabUrl() {
+        downloadTab.click();
         return driver.getCurrentUrl();
     }
 
-    public boolean isSeleniumDownloadsDisplayed(){
-        return driver.findElement(seleniumDownloadsMenu).isDisplayed();
+    public boolean isSeleniumDownloadsDisplayed() {
+        return seleniumDownloadsMenu.isDisplayed();
     }
 
 }

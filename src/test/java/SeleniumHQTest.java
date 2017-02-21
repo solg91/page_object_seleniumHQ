@@ -37,72 +37,72 @@ public class SeleniumHQTest {
     }
 
     @Test
-    public void testProjectLogoIsDisplayed() {
+    public void projectLogoIsDisplayed() {
         ProjectsPageObject projectTab = mainPage.clickProjectTab();
         assertTrue(projectTab.isSeleniumLogoDisplay());
     }
 
     @Test
-    public void testProjectTabTitleIsDisplayed(){
+    public void projectTabTitleIsDisplayed(){
         ProjectsPageObject projectTab = mainPage.clickProjectTab();
         assertThat(projectTab.getProjectsTitle(), is("Selenium Projects"));
     }
 
     @Test
-    public void testDownloadTabCurrentUrlIsTrue(){
+    public void downloadTabCurrentUrlIsTrue(){
        DownloadPageObject downloadTab = mainPage.clickDownloadTab();
         assertThat(downloadTab.getDownloadTabUrl(), is("http://www.seleniumhq.org/download/"));
     }
 
     @Test
-    public void testSeleniumDownloadsMenuIsDisplayed() {
+    public void seleniumDownloadsMenuIsDisplayed() {
         DownloadPageObject downloadTab = mainPage.clickDownloadTab();
         assertTrue(downloadTab.isSeleniumDownloadsDisplayed());
     }
 
     @Test
-    public void testDocTabLanguagesPreferenceIsDisplayed() {
+    public void docTabLanguagesPreferenceIsDisplayed() {
         DocumentationPageObject docTab = mainPage.clickDocumentationTab();
         assertTrue(docTab.isCodeLanguagePreferencesDisplayed());
     }
 
     @Test
-    public void testDocTabNextTopicTextByDefault() {
+    public void docTabNextTopicTextByDefault() {
         DocumentationPageObject docTab = mainPage.clickDocumentationTab();
         assertThat(docTab.getNextTopicText(), is("Note to the Reader - Docs Being Revised for Selenium 2.0!"));
     }
 
     @Test
-    public void testSupportTabGettingHelpIsDisplayed() {
+    public void supportTabGettingHelpIsDisplayed() {
         SupportPageObject supportTab = mainPage.clickSupportTab();
         assertTrue(supportTab.isGettingHelpLabelDisplayed());
     }
 
     @Test
-    public void testSupportTabOfficialUserLinkIsDisplayed() {
+    public void supportTabOfficialUserLinkIsDisplayed() {
         SupportPageObject supportTab = mainPage.clickSupportTab();
         assertTrue(supportTab.isOfficialUserGroupLinkDisplayed());
     }
 
     @Test
-    public void testSupportTabOfficialUserLinkIsCorrect() {
+    public void supportTabOfficialUserLinkIsCorrect() {
         SupportPageObject supportTab = mainPage.clickSupportTab();
         assertThat(supportTab.getOfficialUserGroupLink(), is("http://groups.google.com/group/selenium-users"));
     }
 
     @Test
-    public void testAboutTabAboutSelLeftMenuIsDisplayed() {
+    public void aboutTabAboutSelLeftMenuIsDisplayed() {
         AboutPageObject aboutTab = mainPage.clickAboutTab();
         assertTrue(aboutTab.isAboutSelLeftMenuDisplayed());
     }
     @Test
-    public void testAboutTabSponsorsLinkIsDisplayed() {
+    public void aboutTabSponsorsLinkIsDisplayed() {
         AboutPageObject aboutTab = mainPage.clickAboutTab();
         assertTrue(aboutTab.isSponsorsLinkDisplayed());
     }
 
     @Test
-    public void testAboutTabGoToSponsorsPage() {
+    public void aboutTabGoToSponsorsPage() {
         AboutPageObject aboutTab = mainPage.clickAboutTab();
         assertThat(aboutTab.clickSponsorsLink(), is("http://www.seleniumhq.org/sponsors/"));
     }

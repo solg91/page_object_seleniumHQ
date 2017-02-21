@@ -1,24 +1,29 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by solg on 20.02.2017.
  */
 public class ProjectsPageObject {
     private WebDriver driver;
-    By seleniumLogo = By.xpath("//img[@src='/images/selenium-logo.png']");
-    By projectsTitle = By.xpath("//*[@id='mainContent']/h2");
+    @FindBy(xpath = "//img[@src='/images/selenium-logo.png']")
+    private WebElement seleniumLogo;
+    @FindBy(xpath = "//*[@id='mainContent']/h2")
+    private WebElement projectsTitle;
 
     public ProjectsPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public boolean isSeleniumLogoDisplay() {
-        return driver.findElement(seleniumLogo).isDisplayed();
+        return seleniumLogo.isDisplayed();
     }
 
     public String getProjectsTitle() {
-        return driver.findElement(projectsTitle).getText();
+        return projectsTitle.getText();
     }
 
 }
