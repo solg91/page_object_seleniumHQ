@@ -1,3 +1,7 @@
+package PageFactory;
+
+import PageFactory.*;
+import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -87,7 +91,7 @@ public class SeleniumHQTest {
     @Test
     public void supportTabOfficialUserLinkIsCorrect() {
         SupportPageObject supportTab = mainPage.clickSupportTab();
-        assertThat(supportTab.getOfficialUserGroupLink(), is("http://groups.google.com/group/selenium-users"));
+        MatcherAssert.assertThat(supportTab.getOfficialUserGroupLink(), is("http://groups.google.com/group/selenium-users"));
     }
 
     @Test
