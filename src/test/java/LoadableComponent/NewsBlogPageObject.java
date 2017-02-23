@@ -12,7 +12,7 @@ import static org.hamcrest.core.Is.is;
 /**
  * Created by solg on 23.02.2017.
  */
-public class NewsBlogPageObject{
+public class NewsBlogPageObject extends LoadableComponent<NewsBlogPageObject>{
     private WebDriver driver;
 
     @FindBy(xpath ="//*[@id='mainContent']/a[1]")
@@ -27,6 +27,13 @@ public class NewsBlogPageObject{
         return seleniumBlog.getAttribute("href");
     }
 
+    @Override
+    protected void load() {
 
 
+    }
+    @Override
+    protected void isLoaded() throws Error {
+        assertThat(driver.getCurrentUrl(), is("http://www.seleniumhq.org/about/news.jsp"));
+    }
 }

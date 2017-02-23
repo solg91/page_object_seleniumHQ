@@ -31,12 +31,12 @@ public class AboutPageObject extends LoadableComponent<AboutPageObject> {
 
     public NewsBlogPageObject clickNewsBlogLink() {
         newsBlog.click();
-        return new NewsBlogPageObject(driver);
+        return new NewsBlogPageObject(driver).get();
     }
 
     public SeleniumEventsPageObject clickSeleniumEventsLink() {
         events.click();
-        return new SeleniumEventsPageObject(driver);
+        return new SeleniumEventsPageObject(driver).get();
     }
     @Override
     protected void load() {
