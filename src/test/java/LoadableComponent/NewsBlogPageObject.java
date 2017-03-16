@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -22,7 +23,7 @@ public class NewsBlogPageObject extends LoadableComponent<NewsBlogPageObject>{
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
+    @Step ("Get Blog link")
     public String getBlogLink() {
         return seleniumBlog.getAttribute("href");
     }

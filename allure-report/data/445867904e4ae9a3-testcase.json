@@ -1,0 +1,59 @@
+{
+  "uid" : "445867904e4ae9a3",
+  "name" : "supportTabOfficialUserLinkIsDisplayed",
+  "title" : "Support tab official user link is displayed",
+  "time" : {
+    "start" : 1489591849163,
+    "stop" : 1489591849556,
+    "duration" : 393
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "a5c94f25f1b6d2bb",
+    "name" : "Command line suite : Command line test",
+    "title" : "Command line suite : Command line test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "testClass",
+    "value" : "PageFactory.SeleniumHQTest"
+  }, {
+    "name" : "thread",
+    "value" : "668@nb-solg.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-title",
+    "value" : "Command line suite : Command line test"
+  }, {
+    "name" : "testSuite",
+    "value" : "Command line suite"
+  }, {
+    "name" : "testMethod",
+    "value" : "supportTabOfficialUserLinkIsDisplayed"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "host",
+    "value" : "nb-solg"
+  }, {
+    "name" : "testGroup",
+    "value" : "Command line test"
+  }, {
+    "name" : "suite-name",
+    "value" : "Command line suite : Command line test"
+  } ],
+  "parameters" : [ ]
+}

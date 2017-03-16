@@ -1,0 +1,59 @@
+{
+  "uid" : "b80e64369f11e602",
+  "name" : "docTabLanguagesPreferenceIsDisplayed",
+  "title" : "Doc tab languages preference is displayed",
+  "time" : {
+    "start" : 1489591844645,
+    "stop" : 1489591845224,
+    "duration" : 579
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "a5c94f25f1b6d2bb",
+    "name" : "Command line suite : Command line test",
+    "title" : "Command line suite : Command line test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "testClass",
+    "value" : "PageFactory.SeleniumHQTest"
+  }, {
+    "name" : "thread",
+    "value" : "668@nb-solg.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-title",
+    "value" : "Command line suite : Command line test"
+  }, {
+    "name" : "testSuite",
+    "value" : "Command line suite"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "host",
+    "value" : "nb-solg"
+  }, {
+    "name" : "testMethod",
+    "value" : "docTabLanguagesPreferenceIsDisplayed"
+  }, {
+    "name" : "testGroup",
+    "value" : "Command line test"
+  }, {
+    "name" : "suite-name",
+    "value" : "Command line suite : Command line test"
+  } ],
+  "parameters" : [ ]
+}

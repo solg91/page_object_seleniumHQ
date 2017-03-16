@@ -1,13 +1,13 @@
 package PageFactory;
 
-import PageFactory.*;
 import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+import org.testng.internal.BaseTestMethod;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -17,6 +17,8 @@ import static org.testng.Assert.assertTrue;
 /**
  * Created by solg on 20.02.2017.
  */
+
+@Listeners
 public class SeleniumHQTest {
     private WebDriver driver;
     private MainPageObject mainPage;
@@ -34,12 +36,13 @@ public class SeleniumHQTest {
         driver.quit();
     }
 
-
     private MainPageObject openSeleniumHqPage() {
         driver.get("http://www.seleniumhq.org/");
         return new MainPageObject(driver);
     }
-
+    public WebDriver getDriver(){
+        return driver;
+    }
     @Test
     public void projectLogoIsDisplayed() {
         ProjectsPageObject projectTab = mainPage.clickProjectTab();
@@ -55,7 +58,7 @@ public class SeleniumHQTest {
     @Test
     public void downloadTabCurrentUrlIsTrue(){
        DownloadPageObject downloadTab = mainPage.clickDownloadTab();
-        assertThat(downloadTab.getDownloadTabUrl(), is("http://www.seleniumhq.org/download/"));
+        assertThat(downloadTab.getDownloadTabUrl(), is("2http://www.seleniumhq.org/download/"));
     }
 
     @Test
@@ -96,18 +99,18 @@ public class SeleniumHQTest {
 
     @Test
     public void aboutTabAboutSelLeftMenuIsDisplayed() {
-        AboutPageObject aboutTab = mainPage.clickAboutTab();
+        AboutPageObjectFactory aboutTab = mainPage.clickAboutTab();
         assertTrue(aboutTab.isAboutSelLeftMenuDisplayed());
     }
     @Test
     public void aboutTabSponsorsLinkIsDisplayed() {
-        AboutPageObject aboutTab = mainPage.clickAboutTab();
+        AboutPageObjectFactory aboutTab = mainPage.clickAboutTab();
         assertTrue(aboutTab.isSponsorsLinkDisplayed());
     }
 
     @Test
     public void aboutTabGoToSponsorsPage() {
-        AboutPageObject aboutTab = mainPage.clickAboutTab();
+        AboutPageObjectFactory aboutTab = mainPage.clickAboutTab();
         assertThat(aboutTab.clickSponsorsLink(), is("http://www.seleniumhq.org/sponsors/"));
     }
 

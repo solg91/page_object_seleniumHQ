@@ -1,0 +1,168 @@
+{
+  "testCases" : [ {
+    "uid" : "b88c7472649f29ee",
+    "name" : "newsBlogSeleniumBlogLinkIsCorrect",
+    "title" : "News blog selenium blog link is correct",
+    "time" : {
+      "start" : 1489591830495,
+      "stop" : 1489591833122,
+      "duration" : 2627
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "19bd59c604e1e6fc",
+    "name" : "seleniumEventSeleniumLabelIsDisplayed",
+    "title" : "Selenium event selenium label is displayed",
+    "time" : {
+      "start" : 1489591833127,
+      "stop" : 1489591835326,
+      "duration" : 2199
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "7b7c5d0a2e330b52",
+    "name" : "seleniumEventTodayButtonIsDisplayed",
+    "title" : "Selenium event today button is displayed",
+    "time" : {
+      "start" : 1489591835328,
+      "stop" : 1489591836812,
+      "duration" : 1484
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "ea3a4532d95a8ff1",
+    "name" : "aboutTabAboutSelLeftMenuIsDisplayed",
+    "title" : "About tab about sel left menu is displayed",
+    "time" : {
+      "start" : 1489591841809,
+      "stop" : 1489591842280,
+      "duration" : 471
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "2911bf0e807ce72e",
+    "name" : "aboutTabGoToSponsorsPage",
+    "title" : "About tab go to sponsors page",
+    "time" : {
+      "start" : 1489591842284,
+      "stop" : 1489591844135,
+      "duration" : 1851
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "ad5619c9b4897f55",
+    "name" : "aboutTabSponsorsLinkIsDisplayed",
+    "title" : "About tab sponsors link is displayed",
+    "time" : {
+      "start" : 1489591844141,
+      "stop" : 1489591844643,
+      "duration" : 502
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "b80e64369f11e602",
+    "name" : "docTabLanguagesPreferenceIsDisplayed",
+    "title" : "Doc tab languages preference is displayed",
+    "time" : {
+      "start" : 1489591844645,
+      "stop" : 1489591845224,
+      "duration" : 579
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "e3c5a278ac2db10b",
+    "name" : "docTabNextTopicTextByDefault",
+    "title" : "Doc tab next topic text by default",
+    "time" : {
+      "start" : 1489591845234,
+      "stop" : 1489591845740,
+      "duration" : 506
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "fbb621fbf27fa1c9",
+    "name" : "downloadTabCurrentUrlIsTrue",
+    "title" : "Download tab current url is true",
+    "time" : {
+      "start" : 1489591845742,
+      "stop" : 1489591846607,
+      "duration" : 865
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "8c9248f7d0507de8",
+    "name" : "projectLogoIsDisplayed",
+    "title" : "Project logo is displayed",
+    "time" : {
+      "start" : 1489591846609,
+      "stop" : 1489591847192,
+      "duration" : 583
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "ef5e185fbe0c334b",
+    "name" : "projectTabTitleIsDisplayed",
+    "title" : "Project tab title is displayed",
+    "time" : {
+      "start" : 1489591847195,
+      "stop" : 1489591847625,
+      "duration" : 430
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "844189013156938e",
+    "name" : "seleniumDownloadsMenuIsDisplayed",
+    "title" : "Selenium downloads menu is displayed",
+    "time" : {
+      "start" : 1489591847626,
+      "stop" : 1489591848083,
+      "duration" : 457
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "b35112b3706ce7f7",
+    "name" : "supportTabGettingHelpIsDisplayed",
+    "title" : "Support tab getting help is displayed",
+    "time" : {
+      "start" : 1489591848086,
+      "stop" : 1489591848728,
+      "duration" : 642
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "98d4d870b4fa7044",
+    "name" : "supportTabOfficialUserLinkIsCorrect",
+    "title" : "Support tab official user link is correct",
+    "time" : {
+      "start" : 1489591848729,
+      "stop" : 1489591849161,
+      "duration" : 432
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "445867904e4ae9a3",
+    "name" : "supportTabOfficialUserLinkIsDisplayed",
+    "title" : "Support tab official user link is displayed",
+    "time" : {
+      "start" : 1489591849163,
+      "stop" : 1489591849556,
+      "duration" : 393
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

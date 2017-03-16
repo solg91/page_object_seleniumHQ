@@ -1,0 +1,59 @@
+{
+  "uid" : "b88c7472649f29ee",
+  "name" : "newsBlogSeleniumBlogLinkIsCorrect",
+  "title" : "News blog selenium blog link is correct",
+  "time" : {
+    "start" : 1489591830495,
+    "stop" : 1489591833122,
+    "duration" : 2627
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "a5c94f25f1b6d2bb",
+    "name" : "Command line suite : Command line test",
+    "title" : "Command line suite : Command line test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "668@nb-solg.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "testClass",
+    "value" : "LoadableComponent.AboutPageTest"
+  }, {
+    "name" : "suite-title",
+    "value" : "Command line suite : Command line test"
+  }, {
+    "name" : "testSuite",
+    "value" : "Command line suite"
+  }, {
+    "name" : "testMethod",
+    "value" : "newsBlogSeleniumBlogLinkIsCorrect"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "host",
+    "value" : "nb-solg"
+  }, {
+    "name" : "testGroup",
+    "value" : "Command line test"
+  }, {
+    "name" : "suite-name",
+    "value" : "Command line suite : Command line test"
+  } ],
+  "parameters" : [ ]
+}

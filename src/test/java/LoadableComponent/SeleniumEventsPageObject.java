@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -25,7 +26,7 @@ public class SeleniumEventsPageObject extends LoadableComponent<SeleniumEventsPa
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
+   @Step ("Check if Today button is displayed")
     public boolean isTodayButtonDisplayed() {
 
         driver.switchTo().frame(0);
@@ -33,7 +34,7 @@ public class SeleniumEventsPageObject extends LoadableComponent<SeleniumEventsPa
         driver.switchTo().defaultContent();
         return result;
     }
-
+    @Step ("Check if Selenium Label is displayed")
     public boolean isSeleniumLabelDisplayed() {
         return seleniumLabel.isDisplayed();
     }
