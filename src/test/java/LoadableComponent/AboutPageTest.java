@@ -1,5 +1,6 @@
 package LoadableComponent;
 
+import Common.AbstractTestClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.LoadableComponent;
@@ -22,7 +23,7 @@ import static org.testng.Assert.assertTrue;
 
 @Listeners (MyListener.class)
 @Description("In this cool suite we will test only cool features")
-public class AboutPageTest {
+public class AboutPageTest extends AbstractTestClass {
     private WebDriver driver;
     AboutPageObject aboutPageObject;
 
@@ -50,7 +51,6 @@ public class AboutPageTest {
     public void seleniumBlogLinkIsCorrect() {
         aboutPageObject = openAboutPage();
         NewsBlogPageObject newsBlogPageObject = aboutPageObject.clickNewsBlogLink();
-     //   aboutPageObject.makeScreenshot();
         assertThat(newsBlogPageObject.getBlogLink(),is("http://seleniumhq.wordpress.com44/"));
     }
 

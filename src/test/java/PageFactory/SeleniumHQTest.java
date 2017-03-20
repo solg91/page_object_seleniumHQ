@@ -1,5 +1,6 @@
 package PageFactory;
 
+import Common.AbstractTestClass;
 import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ import static org.testng.Assert.assertTrue;
  */
 
 @Listeners
-public class SeleniumHQTest {
+public class SeleniumHQTest extends AbstractTestClass {
     private WebDriver driver;
     private MainPageObject mainPage;
 
